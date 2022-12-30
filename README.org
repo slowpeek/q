@@ -1,0 +1,31 @@
+* Usage
+
+#+begin_example
+q [options] [--] command [command options]
+#+end_example
+
+=q= runs a command into background redirecting all its output into
+=/dev/null=. Essentially, it is such one-liner
+
+#+begin_src bash
+  exec "$@" &>/dev/null &
+#+end_src
+
+wrapped in checks so in case of a problem with the command, there is
+some feedback.
+
+The command could be either a path or a name to be looked for in PATH.
+
+Options:
+
+- =-h, --help= :: Show usage
+- =-q= :: Suppress warnings
+- =-V, --version= :: Show version
+
+* Installation
+
+Fetch the archive either from releases or from the development branch,
+extract it and put =q= under =/usr/local/bin/=
+
+In case you downloaded the script alone from github by a raw link, be
+sure to manually make it executable.
