@@ -5,7 +5,7 @@
 
 set -eu
 
-SCRIPT_VERSION=git
+SCRIPT_VERSION=0.1
 
 t_red=$'\e[31m'
 t_yellow=$'\e[33m'
