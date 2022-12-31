@@ -73,7 +73,7 @@ check_dir() {
     done
 }
 
-check_file() {
+check_executable_file() {
     [[ -e "$1" ]] || bye "$1: no such file"
     [[ -f "$1" ]] || bye "$1: not a regular file"
     [[ -x "$1" ]] || bye "$1: not executable"
@@ -93,7 +93,7 @@ check_command() {
     path=$(type -P -- "$1" 2>/dev/null) ||
         bye "$1: there is no such command in PATH"
 
-    check_file "$path"
+    check_executable_file "$path"
 }
 
 main() {
@@ -117,7 +117,7 @@ main() {
 
     if [[ $1 == */* ]]; then
         check_dir "$1"
-        check_file "$1"
+        check_executable_file "$1"
     else
         check_command "$1"
     fi
