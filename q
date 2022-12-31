@@ -57,6 +57,7 @@ EOF
 
 check_dir() {
     local canon
+    # Canonicalize $1
     canon=$(realpath -sm "$1" 2>/dev/null) || bye "$1: what a mess"
 
     local base=/
@@ -64,6 +65,7 @@ check_dir() {
 
     IFS=/ read -ra base <<< "${base:1}"
 
+    # Validate subdirs starting from /
     local path='' t
     for t in "${base[@]}"; do
         path+=/$t
