@@ -89,8 +89,11 @@ check_file() {
 }
 
 check_command() {
-    type -P -- "$1" &>/dev/null ||
+    local path
+    path=$(type -P -- "$1" 2>/dev/null) ||
         bye "$1: there is no such command in PATH"
+
+    check_file "$path"
 }
 
 main() {
