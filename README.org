@@ -24,11 +24,9 @@ Options:
 
 * Installation
 
-Fetch the archive either from releases or from the development branch,
-extract it and put =q= under =/usr/local/bin/=
-
-In case you downloaded the script alone from github by a raw link, be
-sure to manually make it executable.
+Fetch the archive either from releases or from the development branch, extract
+it and put =q= under =/usr/local/bin/=. In case you downloaded the script alone
+from github by a raw link, be sure to manually make it executable.
 
 To enable command completion in bash add this to your =.bashrc=:
 
