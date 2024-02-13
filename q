@@ -37,17 +37,17 @@ Usage: q [options] [--] command [command options]
 q runs a command into background redirecting all its output into
 /dev/null. Essentially, it is such one-liner
 
-    exec "$@" &>/dev/null &
+  exec "$@" &>/dev/null &
 
-wrapped in checks so in case of a problem with the command, there is
-some feedback.
+wrapped in checks so in case of a problem with the command, there is some
+feedback.
 
 The command could be either a path or a name to be looked for in PATH.
 
 Options:
--h, --help                 Show usage
--q                         Suppress warnings
--V, --version              Show version
+  -h, --help                 Show usage
+  -q                         Suppress warnings
+  -V, --version              Show version
 
 Homepage: https://github.com/slowpeek/q
 EOF
