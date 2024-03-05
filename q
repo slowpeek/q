@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-# MIT license (c) 2022 https://github.com/slowpeek
+# MIT license (c) 2022-2024 https://github.com/slowpeek
 # Homepage: https://github.com/slowpeek/q
 
 set -eu
@@ -127,4 +127,4 @@ main() {
     exec "$@" &>/dev/null &
 }
 
-[[ ! ${BASH_SOURCE[0]} == "$0" ]] || main "$@"
+[[ ! ${BASH_SOURCE[0]##*/} == "${0##*/}" ]] || main "$@"
