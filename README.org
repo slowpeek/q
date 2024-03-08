@@ -8,7 +8,7 @@ q [options] [--] command [command options]
 =/dev/null=. Essentially, it is such one-liner
 
 #+begin_src bash
-  exec "$@" &>/dev/null &
+  "$@" &>/dev/null &
 #+end_src
 
 wrapped in checks so in case of a problem with the command, there is

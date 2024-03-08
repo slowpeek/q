@@ -37,7 +37,7 @@ Usage: q [options] [--] command [command options]
 q runs a command into background redirecting all its output into
 /dev/null. Essentially, it is such one-liner
 
-  exec "$@" &>/dev/null &
+  "$@" &>/dev/null &
 
 wrapped in checks so in case of a problem with the command, there is some
 feedback.
@@ -124,7 +124,7 @@ main() {
         check_command "$1"
     fi
 
-    exec "$@" &>/dev/null &
+    "$@" &>/dev/null &
 }
 
 [[ ! ${BASH_SOURCE[0]##*/} == "${0##*/}" ]] || main "$@"
