@@ -22,6 +22,21 @@ Options:
 - =-q= :: Suppress warnings
 - =-V, --version= :: Show version
 
+* Sample error feedback
+
+#+begin_example
+  > q kekw
+  q: kekw: there is no such command in PATH
+  > q /usr/bin/kekw
+  q: /usr/bin/kekw: no such file
+  > q /root/bin/kekw
+  q: /root/bin/kekw: /root/ is not reachable
+  > q /etc/hosts
+  q: /etc/hosts: not executable
+  > q /etc
+  q: /etc: not a regular file
+#+end_example
+
 * Installation
 
 Fetch the archive either from releases or from the development branch, extract
